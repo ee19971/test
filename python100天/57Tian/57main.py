@@ -12,3 +12,4 @@
 @Copyright版权声明：转载请注明出处
 """
 # 用法：无
+from flask import Flask
