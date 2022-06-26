@@ -13,13 +13,21 @@
 """
 # 用法：无
 from flask import Flask, render_template
+import random
+import datetime
 
 app = Flask(__name__)
 
 
 @app.route('/')
-def home():
-    return render_template('57index.html')
+def home() -> int:
+    """
+    网页的根目录
+    :return 网页
+    """
+    num = random.randint(1, 5)
+    nian = datetime.datetime.now().year
+    return render_template('57index.html', numw=num, nian_fen=nian)
 
 
 if __name__ == "__main__":
