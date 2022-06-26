@@ -12,14 +12,14 @@
 @Copyright版权声明：转载请注明出处
 """
 # 用法：无
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def home():
-    return "Hello World!"
+    return render_template('57index.html')
 
 
 if __name__ == "__main__":
