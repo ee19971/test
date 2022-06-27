@@ -53,7 +53,7 @@ def guess(name) -> str:
 
 
 @app.route('/blog')
-def blog():
+def get_blog():
     blog_url = 'https://api.npoint.io/90feb61cbf4d59de0133'
     response = requests.get(url=blog_url)
     all_w = response.json()
