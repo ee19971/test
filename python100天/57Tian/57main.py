@@ -52,6 +52,11 @@ def guess(name) -> str:
     return render_template('guess.html', NAME=name, AGE=nian_lin, SEX=sex)
 
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html', )
+
+
 # Section 开始
 if __name__ == "__main__":
     app.run()
