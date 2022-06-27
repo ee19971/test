@@ -54,7 +54,10 @@ def guess(name) -> str:
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html', )
+    blog_url = 'https://api.npoint.io/90feb61cbf4d59de0133'
+    response = requests.get(url=blog_url)
+    all_w = response.json()
+    return render_template('blog.html', posts=all_w)
 
 
 # Section 开始
